@@ -1,0 +1,10 @@
+---
+- hosts: remote1
+  tasks:
+
+         - name: Create a docker container
+           docker_container:
+            name: php_dockerimage
+            image: tunedocker/php_project_image:1.0
+            ports:
+                - "82:80"
